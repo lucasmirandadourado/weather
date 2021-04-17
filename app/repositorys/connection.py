@@ -1,8 +1,8 @@
 import json
 
 import psycopg2
-from src.model.weather import Weather
-from src.util.ObjectUtil import ObjectUtil
+from app.models.weather import Weather
+from app.util.ObjectUtil import ObjectUtil
 from datetime import datetime
 
 

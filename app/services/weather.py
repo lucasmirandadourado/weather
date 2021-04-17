@@ -1,7 +1,7 @@
 import requests
 import json
-from src.repository.connection import Connection
-from src.util.ObjectUtil import ObjectUtil
+from app.repositorys.connection import Connection
+from app.util.ObjectUtil import ObjectUtil
 
 
 class Weather(object):

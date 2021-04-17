@@ -1,6 +1,6 @@
 import json
 import unittest
-from src.services.weather import Weather
+from app.services.weather import Weather
 
 
 class TestApiWeather(unittest.TestCase):

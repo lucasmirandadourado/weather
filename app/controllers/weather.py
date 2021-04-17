@@ -1,9 +1,6 @@
-from flask import Flask, request, jsonify
-from src.services.weather import Weather
-from flask_swagger import swagger
-
-app = Flask("Weather")
-
+from app import app
+from flask import request
+from app.services.weather import Weather
 
 @app.route("/weather", methods=['POST'])
 def findWeather():
@@ -30,6 +27,3 @@ def findAll():
     city = request.args.get('city')
     return Weather().findAll(city=city)
 
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')

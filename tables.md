@@ -1,3 +1,5 @@
+CREATE DATABSE weather;
+
 CREATE TABLE IF NOT EXISTS weather (
 	id serial NOT NULL,
 	coord_lon float8 NULL,
@@ -9,15 +11,15 @@ CREATE TABLE IF NOT EXISTS weather (
 	pressure numeric(10, 2) NULL,
 	humidity numeric(10, 2) NULL,
 	sea_level numeric(10, 2) NULL,
-	grnd_level numeric(10, 2) NULL,
+	grnd_level integer NULL,
 	visibility numeric(10, 2) NULL,
 	wind_speed numeric(10, 2) NULL,
 	wind_deg numeric(10, 2) NULL,
 	wind_gust numeric(10, 2) NULL,
 	clouds_all numeric(10, 2) NULL,
 	country varchar(2) NULL,
-	sunrise timestamp(0) NULL,
-	sunset timestamp(0) NULL,
+	sunrise timestamp NULL,
+	sunset timestamp NULL,
 	city varchar(50) NULL,
 	primary key(id)
 );
