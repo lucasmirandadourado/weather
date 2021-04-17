@@ -14,3 +14,10 @@ class ObjectUtil:
             return True
         else:
             return False
+
+    @staticmethod
+    def isEmpty(value: str):
+        if value.strip() == '':
+            return True
+        else:
+            return False
