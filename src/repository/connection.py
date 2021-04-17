@@ -136,7 +136,7 @@ class Connection:
 
     def findLastDays(self, city: str, dayBegin: str, dayEnd: str):
         try:
-            sql =  '''SELECT * FROM weather 
+            sql = '''SELECT * FROM weather 
             where city ilike '%{}%' 
             and dt::timestamp between '{}'::timestamp and '{} 23:59:59'::timestamp'''.format(city, dayBegin, dayEnd)
             connection = self.__getConnection()

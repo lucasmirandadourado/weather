@@ -1,5 +1,6 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from src.services.weather import Weather
+from flask_swagger import swagger
 
 app = Flask("Weather")
 
@@ -12,20 +13,23 @@ def findWeather():
 
 @app.route("/weather/city")
 def findWeatherCity():
-    city = request.args.get('city')
+    city = request.args.get('name')
     return Weather().getHistory(city)
+
 
 @app.route("/weather/history")
 def findLastDays():
     city = request.args.get('city')
     day_begin = request.args.get('day_begin')
     day_end = request.args.get('day_end')
-    return Weather().findLastDays(city=city, dayBegin=day_begin, dayEnd=day_end)
+    return Weather().getHistoryRangeDays(city=city, dayBegin=day_begin, dayEnd=day_end)
+
 
 @app.route("/weather/history/all")
 def findAll():
     city = request.args.get('city')
     return Weather().findAll(city=city)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

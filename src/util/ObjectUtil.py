@@ -1,3 +1,6 @@
+import datetime
+
+
 class ObjectUtil:
 
     @staticmethod
@@ -21,3 +24,11 @@ class ObjectUtil:
             return True
         else:
             return False
+
+    @staticmethod
+    def notDate(value: str):
+        try:
+            datetime.datetime.strptime(value, '%Y-%m-%d')
+            return False
+        except Exception as error:
+            return True
