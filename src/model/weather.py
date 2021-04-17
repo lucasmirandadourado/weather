@@ -1,3 +1,6 @@
+import datetime
+
+
 class Weather(object):
 
     def __init__(self):
@@ -16,13 +19,13 @@ class Weather(object):
         self.__windDeg: float = None
         self.__windGust: float = None
         self.__cloudsAll: float = None
-        self.__dt: float = None
+        self.__dt: datetime = None
         self.__country: float = None
-        self.__sunrise: float = None
-        self.__sunset: float = None
+        self.__sunrise: datetime = None
+        self.__sunset: datetime = None
         self.__timezone: float = None
         self.__id: float = None
-        self.__city: str = None
+        self.__city = None
 
     def getCoordLon(self):
         return self.__coordLon
@@ -34,7 +37,7 @@ class Weather(object):
         return self.__coordLat
 
     def setCoordLat(self, lat: float):
-        self.__coord_lat = lat
+        self.__coordLat = lat
 
     def getTemp(self):
         return self.__temp
@@ -51,14 +54,14 @@ class Weather(object):
     def getTempMin(self):
         return self.__tempMin
 
-    def setTempMin(self, min):
-        self.__tempMin = min
+    def setTempMin(self, temp):
+        self.__tempMin = temp
 
     def getTempMax(self):
         return self.__tempMax
 
-    def setTempMax(self, max):
-        self.__tempMax = max
+    def setTempMax(self, temp):
+        self.__tempMax = temp
 
     def getPressure(self):
         return self.__pressure
@@ -111,8 +114,8 @@ class Weather(object):
     def getCloudsAll(self):
         return self.__cloudsAll
 
-    def setCloudsAll(self, all):
-        self.__cloudsAll = all
+    def setCloudsAll(self, cloud):
+        self.__cloudsAll = cloud
 
     def getDt(self):
         return self.__dt
