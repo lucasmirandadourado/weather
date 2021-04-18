@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "78175d8e-2c69-4f74-856b-e89db40ede3e",
+		"name": "Desafio Linx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultas direto da API",
+			"item": [
+				{
+					"name": "weather",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=João dourado asdajhsgdasd&APPID=775147cebec422d82008ee515c536eb7",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "João dourado asdajhsgdasd"
+								},
+								{
+									"key": "APPID",
+									"value": "775147cebec422d82008ee515c536eb7"
+								},
+								{
+									"key": "cnt",
+									"value": "15",
+									"disabled": true
+								},
+								{
+									"key": "lang",
+									"value": "pt_br",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint criados",
+			"item": [
+				{
+					"name": "Buscar todos os previsoes de tempo de uma cidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/weather/city?name=João Dourado",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"weather",
+								"city"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "João Dourado"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar o registro no banco",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/weather/city?name=São Paulo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"weather",
+								"city"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "São Paulo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar o histórico das previsõe de tempo de um determinado período",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/weather/history?city=João Dourado&day_begin=2021-02-01&day_end=2021-04-17",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"weather",
+								"history"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "João Dourado"
+								},
+								{
+									"key": "day_begin",
+									"value": "2021-02-01"
+								},
+								{
+									"key": "day_end",
+									"value": "2021-04-17"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar a previsao do tempo de uma cidade e salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}weather?city=João Dourado",
+							"host": [
+								"{{URL}}weather"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "João Dourado"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -26,3 +26,6 @@ Para criar terá que executar o camponado do docker
     docker-composer up -d
 ``` 
 Em segioda execute os comandos que estão no [arquivo](https://github.com/lucasmirandadourado/weather/blob/main/tables.md)
+
+Para ver os Endpoints criados importe para o Postman o arquivo anexado com o nome:
+#### Desafio Linx.postman_collection.json

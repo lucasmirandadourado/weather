@@ -21,5 +21,6 @@ CREATE TABLE IF NOT EXISTS weather (
 	sunrise timestamp NULL,
 	sunset timestamp NULL,
 	city varchar(50) NULL,
-	primary key(id)
+	primary key(id),
+	dt timestamp NULL
 );
